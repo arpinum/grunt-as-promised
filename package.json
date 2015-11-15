@@ -1,6 +1,6 @@
 {
   "name": "grunt-as-promised",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Grunt as promised is a wrapper to help you write async custom tasks through promises",
   "scripts": {
     "pretest": "./node_modules/.bin/jshint .",
