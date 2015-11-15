@@ -1,7 +1,8 @@
 'use strict';
 
-var Bluebird = require('bluebird');
+// var gap = require('grunt-as-promised');
 var gap = require('../index');
+var Bluebird = require('bluebird');
 
 module.exports = function (grunt) {
   grunt.loadTasks('tasks');
