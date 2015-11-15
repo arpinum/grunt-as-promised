@@ -1,0 +1,43 @@
+{
+  "name": "grunt-as-promised",
+  "version": "0.0.0",
+  "description": "Grunt as promised is a wrapper to help you write async custom tasks through promises",
+  "scripts": {
+    "pretest": "./node_modules/.bin/jshint .",
+    "test": "./node_modules/.bin/mocha --colors --reporter spec --recursive lib",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags && npm publish"
+  },
+  "repository": "arpinum-oss/grunt-as-promised",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "author": {
+    "name": "Arpinum",
+    "url": "http://arpinum.fr"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.0.5",
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "chai-as-promised": "^5.1.0",
+    "grunt": "^0.4.5",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5",
+    "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0"
+  },
+  "keywords": [
+    "grunt",
+    "build",
+    "promise",
+    "async",
+    "task",
+    "custom"
+  ]
+}
