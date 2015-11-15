@@ -28,7 +28,7 @@ module.exports = function (grunt) {
 
 ## Examples
 
-Some examples are available in [examples](https://github.com/arpinum-oss/grunt-as-promised/tree/master/exemples).
+Some examples are available in [examples](https://github.com/arpinum-oss/grunt-as-promised/tree/master/examples).
 
 ## License
 
