@@ -23,7 +23,7 @@ Then enhance grunt:
 gap.configure(grunt);
 ```
 
-Then define tasks as functions returning a promise:
+Finally use `grunt.registerPromiseTask` to define tasks as functions returning a promise:
 
 ```javascript
 grunt.registerPromiseTask('inline', function () {
@@ -33,7 +33,7 @@ grunt.registerPromiseTask('inline', function () {
 };
 ```
 
-Complete example:
+## Examples
 
 ```javascript
 var gap = require('grunt-as-promised');
@@ -47,9 +47,7 @@ module.exports = function (grunt) {
 };
 ```
 
-## Examples
-
-Some examples are available in [examples](https://github.com/arpinum-oss/grunt-as-promised/tree/master/examples).
+More examples are available in [examples](https://github.com/arpinum-oss/grunt-as-promised/tree/master/examples).
 
 ## License
 
