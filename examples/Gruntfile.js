@@ -5,15 +5,16 @@ var gap = require('../index');
 var Bluebird = require('bluebird');
 
 module.exports = function (grunt) {
+  gap.configure(grunt);
   grunt.loadTasks('tasks');
 
-  gap.registerTask(grunt, 'inline', function () {
+  grunt.registerPromiseTask('inline', function () {
     return Bluebird.delay(100).then(function () {
       console.log('Inline task');
     });
   });
 
-  gap.registerTask(grunt, 'failing', function () {
+  grunt.registerPromiseTask('failing', function () {
     return Bluebird.delay(100).then(function () {
       console.log('Failing task');
       throw new Error('Houston, we have problem');

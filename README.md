@@ -17,15 +17,33 @@ Require `grunt-as-promised` in your `Gruntfile.js`:
 var gap = require('grunt-as-promised');
 ```
 
+Then enhance grunt:
+
+```javascript
+gap.configure(grunt);
+```
+
 Then define tasks as functions returning a promise:
 
 ```javascript
-module.exports = function (grunt) {
-  gap.registerTask(grunt, 'inline', function () {
-    return doSomething().then(function() {
-      return doSomethingElse();
-    });
+grunt.registerPromiseTask('inline', function () {
+  return doSomething().then(function() {
+    return doSomethingElse();
   });
+};
+```
+
+Complete example:
+
+```javascript
+var gap = require('grunt-as-promised');
+
+module.exports = function (grunt) {
+  gap.configure(grunt);
+
+  grunt.registerPromiseTask('inline', function () {
+    // ...
+  };
 };
 ```
 
